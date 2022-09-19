@@ -1,9 +1,14 @@
 vim.opt.laststatus = 2
 vim.opt.showtabline = 2
 vim.opt.termguicolors = true
+vim.opt.number = true
+vim.opt.cursorline = true
+vim.opt.mouse = 'a'
 
+-- color scheme
 vim.cmd("colorscheme onedarkpro")
 
+-- status line
 require('staline').setup {
     defaults = {
         expand_null_ls = false,  -- This expands out all the null-ls sources to be shown
@@ -54,6 +59,7 @@ require('staline').setup {
     },
 }
 
+-- file tree
 require("nvim-tree").setup({
   view = {
     adaptive_size = true,
@@ -69,4 +75,29 @@ require("nvim-tree").setup({
   filters = {
     dotfiles = true,
   },
+})
+
+
+-- buffer line
+require("bufferline").setup{}
+
+-- cursor line
+require('nvim-cursorline').setup {
+  cursorline = {
+    enable = true,
+    timeout = 1000,
+    number = false,
+  },
+  cursorword = {
+    enable = true,
+    min_length = 3,
+    hl = { underline = true },
+  }
+}
+
+-- scrollbar
+require('scrollview').setup({
+  excluded_filetypes = {'nerdtree'},
+  current_only = true,
+  winblend = 75
 })
