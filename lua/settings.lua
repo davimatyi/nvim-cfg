@@ -13,7 +13,7 @@ require('staline').setup {
     defaults = {
         expand_null_ls = false,  -- This expands out all the null-ls sources to be shown
         left_separator  = "",   -- 
-        right_separator = "",  --  
+        right_separator = "█",  --  
         full_path       = false,
         line_column     = "[%l/%L] :%c 並%p%% ", -- `:h stl` to see all flags.
         fg              = "#000000",  -- Foreground text color.
@@ -25,7 +25,7 @@ require('staline').setup {
         mod_symbol      = "  ",
         lsp_client_symbol = " ",
         branch_symbol   = " ",
-        cool_symbol     = " ",       -- Change this to override default OS icon.
+        cool_symbol     = " ",       -- Change this to override default OS icon.
         null_ls_symbol = "",          -- A symbol to indicate that a source is coming from null-ls
     },
     mode_colors = {
@@ -41,9 +41,9 @@ require('staline').setup {
         v = " ",   -- etc..
     },
     sections = {
-        left = { '- ', '-mode', '-branch', ' ', 'file_name', 'file_size' },
+        left = { '- ', '-mode', '-branch', 'left_sep_double', ' ', 'file_name', 'file_size' },
         mid  = { 'lsp' },
-        right = { 'cool_symbol', '-line_column' },
+        right = { 'cool_symbol', 'right_sep_double', '-line_column' },
     },
     special_table = {
         NvimTree = { 'NvimTree', ' ' },
