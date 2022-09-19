@@ -32,5 +32,6 @@ return require('packer').startup(function(use)
 	use 'preservim/nerdcommenter'
 	use 'LoricAndre/OneTerm.nvim'
 	use 'dstein64/nvim-scrollview'
+	use 'f-person/git-blame.nvim'
 
 end)
