@@ -8,3 +8,5 @@ end
 
 
 map("n", "<C-b>", ":NvimTreeToggle<CR>", { silent = true })
+map("n", "<C-j>", ":OneTerm term<CR>", { silent = true })
+map("n", "<C-n>", ":OneTerm ranger<CR>", { silent = true })
