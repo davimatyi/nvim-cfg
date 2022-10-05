@@ -4,7 +4,8 @@ return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 
 	-- theme
-	use 'olimorris/onedarkpro.nvim'
+	-- use 'olimorris/onedarkpro.nvim'
+	use 'folke/tokyonight.nvim'
 
 	-- status bar
 	use 'tamton-aquib/staline.nvim'
@@ -23,6 +24,9 @@ return require('packer').startup(function(use)
 	        'nvim-treesitter/nvim-treesitter',
         	run = ':TSUpdate'
     	}
+	use 'godlygeek/tabular'
+	use 'elzr/vim-json'
+	use 'plasticboy/vim-markdown'
 
 	-- cursor highlight
 	use 'yamatsum/nvim-cursorline'

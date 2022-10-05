@@ -4,9 +4,10 @@ vim.opt.termguicolors = true
 vim.opt.number = true
 vim.opt.cursorline = true
 vim.opt.mouse = 'a'
+vim.opt.foldenable = false
 
 -- color scheme
-vim.cmd("colorscheme onedarkpro")
+vim.cmd("colorscheme tokyonight-night")
 
 -- status line
 require('staline').setup {
@@ -99,3 +100,4 @@ require('scrollview').setup({
   current_only = true,
   winblend = 75
 })
+
